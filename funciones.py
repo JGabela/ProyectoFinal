@@ -8,7 +8,7 @@ def bancopalarbras(): #Escoge una palabra para el juego de manera aleatoria
         4: 'puerta',
         5: 'letra'
     }
-    palabra = banco.get(random.randint(1, 5))
+    palabra = banco.get(random.randint(1, 5)) #
     return palabra
 
-print(bancopalarbras())
+
