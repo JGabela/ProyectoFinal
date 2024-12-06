@@ -9,15 +9,19 @@ print('-----------------------------------------------')
 
 while jugar is True: #El loop sirve para volver a jugar si el usuario lo desea
 
-    respuesta = funciones.bancopalarbras() #Extrae un palabra random para la partida
-    espacio = 'Palabra: _____'
-    print(espacio)
+    fallos = 0 #Lleva cuenta de los fallos del usuario en el juego, se resetea al inicio de una partida nueva
+    respuesta = funciones.bancopalarbras() #Extrae un palabra random para la partida, es la respuesta correcta
+    #respUsuario = [] #La lista es para almacenar el progreso del usuario
+    print('Palabra: _ _ _ _ _')
     print('')
+    funciones.visuales(0) #Siempre va a mostrar la visual de la ahorca vacia al inicio del juego
 
+    while fallos < 6:
+        fallos = funciones.intentos(fallos, respuesta)
+        print('fallos:',fallos)
+        funciones.visuales(fallos)
 
-
-
-
+    print('')
 
     #Al terminar la partida se le pregunta al usuario si quiere seguir jugando o no
     jugar = funciones.denuevo(jugar)

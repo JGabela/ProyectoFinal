@@ -11,16 +11,24 @@ def bancopalarbras(): #Escoge una palabra para el juego de manera aleatoria
     palabra = banco.get(random.randint(1, 5)) #
     return palabra
 
+def intentos(fallos, respuesta):
+    resp_usuario = input('Ingrese una letra: ')
+    if resp_usuario in respuesta:
+        print(resp_usuario)
+    else:
+        fallos += 1
+    return fallos
+
 #Imprime visuales para representar los fallos del usuario
 #Al llegar a 6 fallos pierde
 def visuales(fallos):
     if fallos == 0:
         print(' +_____+')
         print(' |     |')
-        print(' |     0')
-        print(' |    /|\\')
-        print(' |     |')
-        print(' |    / \\')
+        print(' |    ')
+        print(' |    ')
+        print(' |    ')
+        print(' |    ')
         print(' |     ')
         print(' ---------')
     elif fallos == 1:
@@ -77,10 +85,7 @@ def visuales(fallos):
         print(' |    / \\')
         print(' |     ')
         print(' ---------')
-
-
-
-
+        print('PERDISTE')
 
 def denuevo(jugar): #Pregunta si el usuario quiere seguir jugando o no
     a = input('Quiere seguir jugando?: ')
@@ -88,9 +93,7 @@ def denuevo(jugar): #Pregunta si el usuario quiere seguir jugando o no
         jugar = True
     elif a == 'Si':
         jugar = True
-    elif a == 'no':
-        jugar = False
-    elif a == 'No':
+    else:
         jugar = False
     return jugar
 
