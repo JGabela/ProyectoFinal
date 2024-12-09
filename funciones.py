@@ -15,9 +15,10 @@ def intentos(fallos, respuesta):
     resp_usuario = input('Ingrese una letra: ')
     if resp_usuario in respuesta:
         print(resp_usuario)
+        return fallos
     else:
         fallos += 1
-    return fallos
+        return fallos
 
 #Imprime visuales para representar los fallos del usuario
 #Al llegar a 6 fallos pierde
