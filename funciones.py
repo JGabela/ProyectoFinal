@@ -13,8 +13,12 @@ def bancopalarbras(): #Escoge una palabra para el juego de manera aleatoria
 
 def intentos(fallos, respuesta):
     resp_usuario = input('Ingrese una letra: ')
+    respuesta = list(respuesta)
+    palabra = ['_', '_', '_', '_', '_']
     if resp_usuario in respuesta:
-        print(resp_usuario)
+        indice_letra = respuesta.index(resp_usuario)
+        palabra[indice_letra] = resp_usuario
+        print(' '.join(palabra))
         return fallos
     else:
         fallos += 1
