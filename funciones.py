@@ -11,18 +11,23 @@ def bancopalarbras(): #Escoge una palabra para el juego de manera aleatoria
     palabra = banco.get(random.randint(1, 5)) #
     return palabra
 
-def intentos(fallos, respuesta):
-    resp_usuario = input('Ingrese una letra: ')
-    respuesta = list(respuesta)
-    palabra = ['_', '_', '_', '_', '_']
+def intentos(resp_usuario,fallos, respuesta):
     if resp_usuario in respuesta:
-        indice_letra = respuesta.index(resp_usuario)
-        palabra[indice_letra] = resp_usuario
-        print(' '.join(palabra))
         return fallos
     else:
         fallos += 1
         return fallos
+
+def marcador(resp_usuario, respuesta, palabra):
+    respuesta = list(respuesta)
+#    palabra = ['_', '_', '_', '_', '_']
+    if resp_usuario in respuesta:
+        indice_letra = respuesta.index(resp_usuario)
+        palabra[indice_letra] = resp_usuario
+        print(' '.join(palabra))
+        #return resp_usuario
+    else:
+        print(' '.join(palabra))
 
 #Imprime visuales para representar los fallos del usuario
 #Al llegar a 6 fallos pierde
