@@ -17,9 +17,11 @@ while jugar is True: #El loop sirve para volver a jugar si el usuario lo desea
     funciones.visuales(0) #Siempre va a mostrar la visual de la ahorca vacia al inicio del juego
 
     while fallos < 6:
+
         fallos = funciones.intentos(fallos, respuesta)
         print('fallos:',fallos)
         funciones.visuales(fallos)
+
 
     print('')
 
