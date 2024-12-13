@@ -5,7 +5,7 @@ def bancopalarbras(): #Escoge una palabra para el juego de manera aleatoria
         1: 'banco',
         2: 'pasta',
         3: 'perro',
-        4: 'puerta',
+        4: 'clase',
         5: 'letra'
     }
     palabra = banco.get(random.randint(1, 5)) #
@@ -20,12 +20,10 @@ def intentos(resp_usuario,fallos, respuesta):
 
 def marcador(resp_usuario, respuesta, palabra):
     respuesta = list(respuesta)
-#    palabra = ['_', '_', '_', '_', '_']
     if resp_usuario in respuesta:
         indice_letra = respuesta.index(resp_usuario)
         palabra[indice_letra] = resp_usuario
         print(' '.join(palabra))
-        #return resp_usuario
     else:
         print(' '.join(palabra))
 
