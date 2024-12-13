@@ -14,10 +14,6 @@ while jugar is True: #El loop sirve para volver a jugar si el usuario lo desea
     palabra = ['_', '_', '_', '_', '_']
 
     print('Palabra: _ _ _ _ _')
-
-    #
-    print(respuesta)
-
     print('Tiene 5 intentos')
     print('')
     funciones.visuales(0) #Siempre va a mostrar la visual de la ahorca vacia al inicio del juego
@@ -34,6 +30,8 @@ while jugar is True: #El loop sirve para volver a jugar si el usuario lo desea
 
         funciones.visuales(fallos)
 
+    if fallos == 6:
+        print('La respuesta es:' ,respuesta)
 
     print('')
 

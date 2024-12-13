@@ -3,8 +3,8 @@ import random #Se usa para hacer la seleccion de palabras aleatoria
 def bancopalarbras(): #Escoge una palabra para el juego de manera aleatoria
     banco = {
         1: 'banco',
-        2: 'pasta',
-        3: 'perro',
+        2: 'pasto',
+        3: 'clero',
         4: 'clase',
         5: 'letra'
     }
@@ -23,9 +23,9 @@ def marcador(resp_usuario, respuesta, palabra):
     if resp_usuario in respuesta:
         indice_letra = respuesta.index(resp_usuario)
         palabra[indice_letra] = resp_usuario
-        print(' '.join(palabra))
+        print('Su respuesta:',' '.join(palabra))
     else:
-        print(' '.join(palabra))
+        print('Su respuesta:',' '.join(palabra))
 
 #Imprime visuales para representar los fallos del usuario
 #Al llegar a 6 fallos pierde
