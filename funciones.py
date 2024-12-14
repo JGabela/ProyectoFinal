@@ -23,9 +23,11 @@ def marcador(resp_usuario, respuesta, palabra):
     if resp_usuario in respuesta:
         indice_letra = respuesta.index(resp_usuario)
         palabra[indice_letra] = resp_usuario
-        print('Su respuesta:',' '.join(palabra))
+        marc = ' '.join(palabra)
+        return marc
     else:
-        print('Su respuesta:',' '.join(palabra))
+        marc = ' '.join(palabra)
+        return marc
 
 #Imprime visuales para representar los fallos del usuario
 #Al llegar a 6 fallos pierde

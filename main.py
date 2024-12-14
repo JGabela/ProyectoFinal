@@ -9,6 +9,7 @@ print('-----------------------------------------------')
 
 while jugar is True: #El loop sirve para volver a jugar si el usuario lo desea
 
+    gano = False
     fallos = 0 #Lleva cuenta de los fallos del usuario en el juego, se resetea al inicio de una partida nueva
     respuesta = funciones.bancopalarbras() #Extrae un palabra random para la partida, es la respuesta correcta
     palabra = ['_', '_', '_', '_', '_']
@@ -24,14 +25,21 @@ while jugar is True: #El loop sirve para volver a jugar si el usuario lo desea
 
         resp_usuario = input('Ingrese una letra: ')
         fallos = funciones.intentos(resp_usuario,fallos, respuesta)
-        funciones.marcador(resp_usuario, respuesta, palabra)
-
+        marcador = funciones.marcador(resp_usuario, respuesta, palabra)
+        print(marcador)
         print('Intentos:', 6 - fallos)
 
         funciones.visuales(fallos)
 
+        if respuesta == marcador.replace(' ', ''):
+            fallos = 6
+            gano = True
+
     if fallos == 6:
         print('La respuesta es:' ,respuesta)
+
+    if gano is True:
+        print('GANASTE!')
 
     print('')
 
