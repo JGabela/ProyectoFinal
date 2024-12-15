@@ -1,3 +1,9 @@
 El Ahorcado
 
-Este proyecto es nuestro intento de hacer un juego del
+Este proyecto es nuestro intento de hacer un juego del ahorcado utilizando Python
+Para realizar este proyecto utilizamos todo lo aprendido en nuestras clases de Fundamentos de la Programacion
+Se utilizan loops, funciones, listas, diccionarios para poder realizar el juego
+
+Para jugar se tiene que correr el archivo main.py, el archivo funciones.py guarda todas las funciones necesarias para
+que el juego funcione de manera adecuada. Al correr el archivo principal en la terminal se mostrara una interfaz
+sencilla que muestra el nombre del juego, numero de intentos, la longitud de la palabra a adivinar, la ahorca
