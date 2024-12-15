@@ -11,6 +11,7 @@ def bancopalarbras(): #Escoge una palabra para el juego de manera aleatoria
     palabra = banco.get(random.randint(1, 5)) #
     return palabra
 
+#Esta funcion revisa si la respuesta del usuario esta en la palabra respuesta, y lleva la cuenta de los fallos
 def intentos(resp_usuario,fallos, respuesta):
     if resp_usuario in respuesta:
         return fallos
@@ -18,6 +19,8 @@ def intentos(resp_usuario,fallos, respuesta):
         fallos += 1
         return fallos
 
+#Esta funcion revisa si la repsuesta del usuario esta en la palabra respuesta
+#si es asi la anade a una lista para mostrar el progreso del usuario
 def marcador(resp_usuario, respuesta, palabra):
     respuesta = list(respuesta)
     if resp_usuario in respuesta:

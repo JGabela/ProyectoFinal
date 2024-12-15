@@ -23,10 +23,10 @@ while jugar is True: #El loop sirve para volver a jugar si el usuario lo desea
 
         print('-----------------------------------------------')
 
-        resp_usuario = input('Ingrese una letra: ')
-        fallos = funciones.intentos(resp_usuario,fallos, respuesta)
-        marcador = funciones.marcador(resp_usuario, respuesta, palabra)
-        print(marcador)
+        resp_usuario = input('Ingrese una letra: ') #Pide por una respuesta del usuario
+        fallos = funciones.intentos(resp_usuario,fallos, respuesta) #Usa la repsuesta del usuario con la funcion intentos
+        marcador = funciones.marcador(resp_usuario, respuesta, palabra) #Usa la respuesta del usuario con la funcion marcador
+        print(marcador) #Muestra el marcador
         print('Intentos:', 6 - fallos)
 
         funciones.visuales(fallos)
